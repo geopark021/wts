@@ -2,9 +2,9 @@ spring:
   application:
     name: wts
   datasource:
-    url: jdbc:mysql://localhost:3306/wts_db?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    username: root
-    password: ${DB_PASSWORD:}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       pool-name: WtsHikariPool
