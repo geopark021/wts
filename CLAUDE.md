@@ -45,4 +45,4 @@ npm run dev
 - **PortfolioSnapshot**: 포트폴리오 read model
 
 ## 현재 개발 단계
-1주차 - 백엔드 기반 구축 중
+1주차 - 기반 구축 완료, 내일 Instrument API 작업 예정
