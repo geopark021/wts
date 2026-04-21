@@ -1,0 +1,11 @@
+## 2026-04-21 (1주차 화요일)
+- bootRun 실패 원인 분석: `DB_PASSWORD` env 미주입 → MySQL 1045 Access denied
+- application.yml의 DB url/username/password를 env placeholder로 전환
+- application-local.yml 생성 (gitignore, 로컬 실제 값)
+- application-local.yml.example 추가 (팀 온보딩용 더미값)
+- .gitignore에 application-local.yml, .claude/ 추가
+- `SPRING_PROFILES_ACTIVE=local` 기동 확인 (1.3s, 잔여 WARN은 Flyway 마이그레이션 미작성 경고 1건)
+- 브랜치 전략 GitHub Flow 채택
+- main 브랜치 보호 설정 (PR 필수, admin 바이패스 차단, squash merge 전용)
+- chore/split-local-config 브랜치 → PR #1 squash merge → 로컬/원격 정리
+- 이슈: 초기 커밋에 DB url/username 하드코딩되어 있었으나 실제 시크릿(password)은 포함되지 않아 히스토리 rewrite 불필요로 판단
